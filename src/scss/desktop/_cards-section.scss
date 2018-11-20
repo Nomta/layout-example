@@ -1,0 +1,22 @@
+$height: 18.125rem;
+
+.cards-section {
+    padding: 2.25rem 0 0.25rem;
+}
+
+.cards-section__item {
+    @include grid-col(4, 2.75rem);
+    height: $height;
+    margin-bottom: 2.75rem;
+    cursor: pointer;
+    &:after {
+        opacity: 0;
+        transition: 0.4s opacity;
+    }
+    &:hover {
+        @include bg-mask($hover-color, "Text on hover") {
+            @include align-content($height, true);
+            opacity: 1;
+        };
+    }
+}

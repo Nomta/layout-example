@@ -1,0 +1,30 @@
+// миксины и расширения, специфичные для данного проекта
+
+@mixin align-content($height, $both: false) {
+    height: $height;
+    line-height: $height;
+
+    & > * {
+        line-height: normal;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    @if $both==true {
+        text-align: center;
+    }
+}
+
+// эмуляция отложенной загрузки изображений через data-src
+
+@mixin bg-images($prefix, $urls...) {
+    $i: 1;
+
+    @each $url in $urls {
+        .#{ $prefix }--#{ $i } {
+            @include bg-image($url, $bg-color);
+        }
+
+        $i: $i+1;
+    }
+}

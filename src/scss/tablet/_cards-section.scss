@@ -1,0 +1,14 @@
+.cards-section {
+    padding: 2.25rem 1rem;
+    &:after {
+        display: table;
+        clear: both;
+        content: '';
+    }
+}
+
+.cards-section__item {
+    @include grid-col(6, 1.25rem);
+    @include aspect-ratio(0.8);
+    margin-bottom: 1.25rem;
+}

@@ -1,0 +1,9 @@
+$cards: (
+    '../images/pedro-lastra-157071.jpg',
+    '../images/jazmin-quaynor-392995.jpg',
+    '../images/pedro-lastra-157071.jpg',
+    '../images/pedro-lastra-157071.jpg',
+    '../images/pedro-lastra-157071.jpg'
+);
+
+@include bg-images('card', $cards...);

@@ -1,0 +1,4 @@
+.page-header__bg-image {
+    z-index: -1;
+    @include bg-mask($bg-filter-color);
+}

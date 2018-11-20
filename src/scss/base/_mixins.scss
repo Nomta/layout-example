@@ -1,0 +1,62 @@
+/** 
+%clearfix:after {
+    display: table;
+    clear: both;
+    content: '';
+} 
+*/
+@mixin aspect-ratio($ratio) {
+    @if unitless($ratio) {
+        $ratio: $ratio * 100%;
+    }
+    &:before {
+        padding-bottom: $ratio;
+        display: block;
+        content: '';
+    }
+}
+
+@mixin bg-image($background-image, $args...) {
+    background: url($background-image) $args no-repeat; 
+    background-size: cover;
+}
+
+@mixin bg-mask($background, $content: "") {
+    position: relative;
+    &:after {
+        content: $content;
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        right: 0; 
+        bottom: 0; 
+        z-index: 2;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: $background;
+        @content;
+    }
+}
+
+@mixin grid-col($size, $gap: 0, $cols: 12) {
+    $cols-of-row: $cols / $size;
+    $last-of-row: floor($cols-of-row);
+
+    @if $gap == 0 {
+        width: 99.98% / $cols-of-row;
+    }
+    @else {
+        width: calc((99.98% - #{ $gap * ($cols-of-row - 1) }) / #{ $cols-of-row });
+        margin-left: 0;
+
+        &:not(:nth-of-type(#{ $last-of-row }n)) {
+            margin-right: $gap;
+        }
+
+        &:nth-of-type(#{ $last-of-row }n) {
+            margin-right: 0;
+        }
+    }
+    float: left;
+}

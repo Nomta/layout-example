@@ -1,0 +1,7 @@
+$slides: (
+    '../images/avi-richards-183715.jpg',
+    '../images/markus-spiske-357131.jpg',
+    '../images/charles-deluvio-456501.jpg'
+);
+
+@include bg-images('slide', $slides...);

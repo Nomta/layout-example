@@ -1,0 +1,8 @@
+@import 'typography';
+@import 'search';
+@import 'cards-section';
+@import 'page-footer';
+
+@media screen and (max-width: #{$lg-screen - 1}) and (min-height: 600px) {
+    @import 'slider';
+}

@@ -1,0 +1,20 @@
+.ellipses__item {
+    width: 19px;
+    height: 19px;
+    float: left;
+    border-radius: 50%;
+    background-color: $light-color;
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+.ellipses__item--active {
+    background-color: $accent-color;
+}
+
+.ellipses:after {
+    display: table;
+    clear: both;
+    content: '';
+}

@@ -1,0 +1,4 @@
+.cards-section__item {
+    width: 100%;
+    @include aspect-ratio(0.8);
+}

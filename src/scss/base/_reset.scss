@@ -1,0 +1,62 @@
+* {
+	box-sizing: border-box;
+}
+html, body {
+	height: 100%;
+	margin: 0;
+	text-size-adjust: none;
+	text-size-adjust: 100%;
+	touch-action: manipulation;
+}	
+html {
+	font-family: sans-serif	;
+}	
+h1, h2, h3, h4 {
+	margin: 0;
+	padding: 0;
+}
+address { 
+	font-style: normal;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+a:active, a:hover { 
+	outline: 0;
+}
+button, input, select, textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+button { 
+	overflow: visible;
+	text-transform: none;
+	background-color: transparent;
+	border: none;
+}
+button, button:active, button:focus { 
+	outline: none;
+}
+button[disabled], html input[disabled] {
+	cursor: default;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] { 
+	cursor: pointer;
+}
+img, embed, object, video { 
+	max-width: 100%;
+}
+img {
+	vertical-align: bottom;
+	border: none;
+//	display: block;
+//	height: auto;
+//	width: auto;
+}
+ol, ul { 
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}

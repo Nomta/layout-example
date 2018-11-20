@@ -1,0 +1,58 @@
+$gap: 1.25rem;
+$main-width: 45.25rem;
+$aside-width: 26.5rem;
+$height: 37.5rem;
+$item-height: ($height - $gap) / 2;
+
+.gallery {
+    display: block;
+}
+
+.gallery__main-content {
+    position: absolute;
+    width: $main-width;
+    @include align-content($height);
+}
+
+.gallery__aside {
+    width: $aside-width;
+    height: $item-height;
+    position: relative;
+    left: $main-width + $gap;
+    margin-bottom: $gap;
+}
+
+.gallery__aside-item {
+    position: relative;
+    @include align-content($item-height);
+    padding-left: 2rem;
+}
+
+.gallery__content--main {
+    width: 38rem;
+}
+
+.gallery__button {
+    margin-top: 2.25rem;
+}
+
+.gallery__bg-image {
+    z-index: -1;
+    @include bg-mask($bg-filter-color);
+}
+
+.gallery__bg-image--main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 61vw;
+    height: $height;
+}
+
+.gallery__bg-image--aside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 47vw;
+    height: $item-height;
+}

@@ -1,0 +1,28 @@
+.search__form {
+    padding: 0 9px 9px 3px;
+    border-bottom: 1px solid rgba(69, 69, 69, 0.18);
+
+    &:after {
+        display: table;
+        clear: both;
+        content: '';
+    }
+}
+
+.search__input {
+    border: none;
+    outline: none;
+}
+
+.search__placeholder {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    line-height: 2;
+    text-transform: uppercase;
+    color: $muted-color;
+}
+
+.search__icon {
+    float: right;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAPBAMAAADNDVhEAAAAAXNSR0IB2cksfwAAAB5QTFRFAAAAMTExMTExMTExMTExMTExMTExMTExMTExMTEx9uHNTgAAAAp0Uk5TACKq7v9Ed2Yzu+xo4YUAAABQSURBVHicY2CAASETIwEgxWri4mIKpIWd05OdgQIqhgyMJgoMDCYJDAwpBgwMLgUMDCUOCD5MHqQeJAfS72IBMa/YuQFsNIeJAcSO5gkw2wA2YA48PmvomwAAAABJRU5ErkJggg==") no-repeat;
+}
